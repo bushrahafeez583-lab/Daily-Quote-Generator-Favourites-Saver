@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Quotes | Inspiration Hub</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <header class="header">
+
+            <a href="#" class="logo">
+                <i class="fa-solid fa-feather-pointed"></i>
+                <span>Daily<span class="logo-highlight">Quotes</span></span>
+            </a>
+
+            <nav class="navigation">
+                <button class="nav-btn active" id="homeBtn">
+                    <i class="fa-solid fa-house"></i>
+                    Home
+                </button>
+
+                <button class="nav-btn" id="favoritesBtn">
+                    <i class="fa-solid fa-heart"></i>
+                    Favorites
+                    <span class="favorite-count" id="favoriteCount">0</span>
+                </button>
+            </nav>
+            <div class="header-actions">
+                <button class="icon-btn" id="soundToggle" aria-label="Toggle sound">
+                    <i class="fa-solid fa-volume-high"></i>
+                </button>
+
+                <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+            </div>
+        </header>
+        <main class="main-content">
+            <section class="hero-section">
+
+                <span class="hero-tag">
+                    <i class="fa-solid fa-sparkles"></i>
+                    YOUR DAILY DOSE OF INSPIRATION
+                </span>
+
+                <h1>
+                    Words That <span>Inspire</span>
+                    <br>
+                    Your Everyday Life.
+                </h1>
+
+                <p>
+                    Discover beautiful thoughts, powerful words and
+                    daily motivation to make every moment meaningful.
+                </p>
+
+            </section>
+            <section class="quote-section" id="homeSection">
+
+                <div class="section-heading">
+                    <div>
+                        <span class="small-heading">A LITTLE INSPIRATION</span>
+                        <h2>Quote of the Moment</h2>
+                    </div>
+
+                    <span class="live-badge">
+                        <span class="live-dot"></span>
+                        DAILY INSPIRATION
+                    </span>
+                </div>
+                <div class="quote-card" id="quoteCard">
+
+                    <div class="quote-decoration">
+                        <i class="fa-solid fa-quote-left"></i>
+                    </div>
+
+                    <div class="quote-content" id="quoteContent">
+
+                        <p class="quote-text" id="quoteText">
+                            Your inspiring quote will appear here.
+                        </p>
+
+                        <div class="quote-author">
+                            <span class="author-line"></span>
+                            <span id="quoteAuthor">Loading...</span>
+                        </div>
+
+                    </div>
+                    <div class="quote-footer">
+
+                        <div class="quote-category">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            Inspiration
+                        </div>
+
+                        <div class="quote-actions">
+
+                            <button class="action-btn" id="copyBtn" aria-label="Copy quote">
+                                <i class="fa-regular fa-copy"></i>
+                            </button>
+
+                            <button class="action-btn" id="favoriteBtn" aria-label="Add to favorites">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+
+                            <button class="action-btn" id="shareBtn" aria-label="Share quote">
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="primary-actions">
+
+                    <button class="generate-btn" id="newQuoteBtn">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        Generate New Quote
+                    </button>
+
+                </div>
+
+                <div class="share-section">
+
+                    <span>Share inspiration with others</span>
+
+                    <div class="social-buttons">
+
+                        <button class="social-btn whatsapp-btn" id="whatsappBtn">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            WhatsApp
+                        </button>
+
+                        <button class="social-btn twitter-btn" id="twitterBtn">
+                            <i class="fa-brands fa-x-twitter"></i>
+                            Share on X
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+            <section class="favorites-section" id="favoritesSection" hidden>
+
+                <div class="section-heading">
+                    <div>
+                        <span class="small-heading">YOUR PERSONAL COLLECTION</span>
+                        <h2>Favorite Quotes</h2>
+                    </div>
+
+                    <span class="live-badge">
+                        <i class="fa-solid fa-heart"></i>
+                        SAVED QUOTES
+                    </span>
+                </div>
+
+                <div class="favorites-grid" id="favoritesGrid">
+
+                </div>
+
+                <div class="empty-state" id="emptyState">
+
+                    <div class="empty-icon">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+
+                    <h3>No Favorites Yet</h3>
+
+                    <p>
+                        Save your favorite quotes and they will appear here.
+                    </p>
+
+                    <button class="generate-btn" id="exploreBtn">
+                        Explore Quotes
+                    </button>
+
+                </div>
+
+            </section>
+            <section class="features-section">
+
+                <div class="feature-card">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <h3>Daily Inspiration</h3>
+                    <p>Discover new thoughts and motivational quotes.</p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fa-solid fa-bookmark"></i>
+                    <h3>Save Favorites</h3>
+                    <p>Keep your favorite quotes in one place.</p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fa-solid fa-share-nodes"></i>
+                    <h3>Share Happiness</h3>
+                    <p>Share meaningful words with your loved ones.</p>
+                </div>
+
+            </section>
+
+        </main>
+        <div class="toast" id="toast">
+            <i class="fa-solid fa-circle-check"></i>
+            <span id="toastMessage">Success!</span>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
